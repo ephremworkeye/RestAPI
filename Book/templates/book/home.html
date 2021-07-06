@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}home{% endblock title %}
+
+{% block content %}
+<ul>
+    {% for book in object_list %}
+        <li>{{ book.title }}</li>
+        <li>{{ book.author }}</li>
+        <li>{{ book.description }}</li>
+    {% empty %}
+        <h4>There are no books listed</h4>
+    {% endfor %}
+</ul>
+{% endblock content %}
