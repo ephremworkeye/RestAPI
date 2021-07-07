@@ -5,5 +5,6 @@ from . import api_views
 
 urlpatterns = [
     path('', BookList.as_view(), name='book_lsit'),
-    path('api', api_views.count_books)
+    path('api', api_views.count_books),
+    path('all', api_views.all_books),
 ]
