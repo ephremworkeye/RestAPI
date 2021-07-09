@@ -1,3 +1,4 @@
+from django.db.models.query import QuerySet
 from rest_framework import serializers
 import rest_framework
 
@@ -31,5 +32,9 @@ class AllBooks(generics.ListAPIView):
     serializer_class = BookSerilizer
 
 class AllAuthors(generics.ListAPIView):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerilizer
+
+class AuthorDetail(generics.RetrieveAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerilizer

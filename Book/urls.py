@@ -10,5 +10,5 @@ urlpatterns = [
     # path('all', api_views.all_books),
     path('api/all_books', api_views.AllBooks.as_view(), name='all_books'), # from model serializer
     path('api/all_authors', api_views.AllAuthors.as_view(), name='all_authors'), #from model serializer
-    
+    path('api/author/<int:pk>', api_views.AuthorDetail.as_view(), name='detail'), # retrive single author
 ]
