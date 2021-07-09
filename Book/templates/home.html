@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h2>Book list</h2>
+        <ul>Book list</ul>
+        {% for book in books %}
+            <li>{{ book.title }}</li>
+        {% empty %}
+            <h2>No books</h2>
+        {% endfor %}
+
+        <h2>Author list</h2>
+        <ul>Author list</ul>
+        {% for author in authors %}
+            <li>{{ author.first_name }}</li>
+        {% empty %}
+            <h2>No books</h2>
+        {% endfor %}
+    </body>
+</html>
