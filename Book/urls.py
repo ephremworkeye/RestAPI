@@ -8,5 +8,7 @@ urlpatterns = [
     # path('home', Home.as_view(), name='home'),
     # path('api', api_views.count_books),
     # path('all', api_views.all_books),
-    path('api/allbooks', api_views.AllBooks.as_view(), name='all_books'), # from model serializer
+    path('api/all_books', api_views.AllBooks.as_view(), name='all_books'), # from model serializer
+    path('api/all_authors', api_views.AllAuthors.as_view(), name='all_authors'), #from model serializer
+    
 ]

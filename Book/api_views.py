@@ -11,8 +11,8 @@ import rest_framework
 
 # class serilizer
 from rest_framework import generics
-from .models import Book
-from .serializers import BookSerilizer
+from .models import Book, Author
+from .serializers import AuthorSerilizer, BookSerilizer
 
 
 # @api_view()
@@ -29,4 +29,7 @@ from .serializers import BookSerilizer
 class AllBooks(generics.ListAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerilizer
-    
+
+class AllAuthors(generics.ListAPIView):
+    queryset = Author.objects.all()
+    serializer_class = AuthorSerilizer
